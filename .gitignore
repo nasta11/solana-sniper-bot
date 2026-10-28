@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Runtime logs
+logs.json
+snipes.txt
+targets.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
