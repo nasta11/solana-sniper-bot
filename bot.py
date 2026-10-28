@@ -4,11 +4,14 @@ import traceback
 import websockets
 from aiogram import Bot
 import os
+from dotenv import load_dotenv
 from datetime import datetime, timezone
 
-TELEGRAM_TOKEN = "7804602601:AAFh0KU9RQX9iSL9hQvf22P52GdznUolTik"
-TELEGRAM_CHAT_ID = "1184092097"
-QUICKNODE_WS = "wss://rpc.helius.xyz/?api-key=a0967632-6a68-4270-b17b-607702e200af"
+# Secrets are read from the .env file (never commit it). See .env.example.
+load_dotenv()
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+QUICKNODE_WS = os.environ["SOLANA_WS_URL"]
 
 bot = Bot(token=TELEGRAM_TOKEN)
 
